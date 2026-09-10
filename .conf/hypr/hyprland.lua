@@ -42,7 +42,7 @@ hl.monitor({
     output   = "HDMI-A-1",
 --    mode     = "1280x1024@75.03",
     mode     = "1920x1080@75",
-    position = "1366x0",
+    position = "1920x0",
     scale    = "0.5",
     mirror = "LVDS-1",
 })
@@ -73,6 +73,7 @@ hl.exec_cmd("awww-daemon & sleep 0.2 && awww restore")
 hl.exec_cmd("wl-paste --type text --watch cliphist store")
 --hl.exec_cmd("/home/iusearchbtw/.config/waybar/change_wallpaper.sh")
 hl.exec_cmd(os.getenv("HOME") .. "/.config/waybar/change_wallpaper.sh")
+hl.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/autowallpaper.sh")
 --hl.exec_cmd("sleep 0.5 && /home/iusearchbtw/.config/waybar/toggle_notes.sh")
 hl.exec_cmd("sleep 0.5 && " .. os.getenv("HOME") .. "/.config/waybar/toggle_notes.sh")
 hl.exec_cmd("wl-paste --type image --watch cliphist store")
@@ -81,7 +82,7 @@ hl.exec_cmd("easyeffects --gapplication-service")
 hl.exec_cmd("pactl set-default-sink easyeffects_sink")
 hl.exec_cmd("waybar & swaync")
 --hl.exec_cmd("hyprpaper")
-hl.exec_cmd("nwg-dock-hyprland -d -r -p bottom")
+hl.exec_cmd("nwg-dock-hyprland -d -r -p bottom -o HDMI-A-1")
 hl.exec_cmd("nautilus '" .. os.getenv("HOME") .. "/Songs' & until hyprctl clients | grep -q 'class: org.gnome.Nautilus'; do sleep 0.2; done; tauon & until hyprctl clients | grep -q 'class: tauonmb'; do sleep 0.2; done; kitty --class kitty-cava -e cava &")
 end)
 
@@ -186,7 +187,7 @@ hl.config({
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
-        active_opacity   = 1.0,
+        active_opacity   = 0.90,
         inactive_opacity = 0.75,
 
         shadow = {
@@ -447,8 +448,8 @@ hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -a"))
 hl.bind(ctrlMod .. " + SPACE", hl.dsp.exec_cmd("playerctl -p tauon play-pause"))
 hl.bind(ctrlMod .. " + LEFT", hl.dsp.exec_cmd("playerctl -p tauon previous"))
 hl.bind(ctrlMod .. " + RIGHT", hl.dsp.exec_cmd("playerctl -p tauon next"))
-hl.bind(ctrlMod .. " + UP", hl.dsp.exec_cmd("playerctl -p tauon volume 0.05+"))
-hl.bind(ctrlMod .. " + DOWN", hl.dsp.exec_cmd("playerctl -p tauon volume 0.05-"))
+hl.bind(ctrlMod .. " + UP", hl.dsp.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ +5%"))
+hl.bind(ctrlMod .. " + DOWN", hl.dsp.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ -5%"))
 --TO-DO list
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("~/.config/waybar/toggle_notes.sh"))
 
@@ -564,3 +565,6 @@ hl.window_rule({
     size  = { 800, 600 },
 })
 
+
+-- HyprMod managed settings
+require("hyprland-gui")

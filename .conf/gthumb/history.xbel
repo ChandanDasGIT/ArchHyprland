@@ -3,21 +3,31 @@
       xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
       xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
 >
-  <bookmark href="file:///home/iusearchbtw/Pictures" added="2026-08-30T13:02:43.609533Z" modified="2026-08-30T13:02:43.609541Z" visited="2026-08-30T13:02:43.609534Z">
+  <bookmark href="file:///home/iusearchbtw/Pictures/Wallpapers" added="2026-09-01T08:49:00.874173Z" modified="2026-09-01T08:49:00.874183Z" visited="2026-09-01T08:49:00.874175Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <bookmark:applications>
-          <bookmark:application name="gThumb" exec="&apos;org.gnome.gThumb %u&apos;" modified="2026-08-30T13:02:43.609538Z" count="1"/>
+          <bookmark:application name="gThumb" exec="&apos;org.gnome.gThumb %u&apos;" modified="2026-09-01T08:49:00.874177Z" count="1"/>
         </bookmark:applications>
         <bookmark:private/>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///run/media/iusearchbtw/Nocturnal/MaaPhotos" added="2026-08-30T13:02:43.609543Z" modified="2026-08-30T13:02:43.609545Z" visited="2026-08-30T13:02:43.609543Z">
+  <bookmark href="file:///home/iusearchbtw/Pictures" added="2026-09-01T08:49:00.874185Z" modified="2026-09-01T08:49:00.874191Z" visited="2026-09-01T08:49:00.874186Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <bookmark:applications>
-          <bookmark:application name="gThumb" exec="&apos;org.gnome.gThumb %u&apos;" modified="2026-08-30T13:02:43.609544Z" count="1"/>
+          <bookmark:application name="gThumb" exec="&apos;org.gnome.gThumb %u&apos;" modified="2026-09-01T08:49:00.874187Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///run/media/iusearchbtw/Nocturnal/MaaPhotos" added="2026-09-01T08:49:00.874192Z" modified="2026-09-01T08:49:00.874195Z" visited="2026-09-01T08:49:00.874193Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;org.gnome.gThumb %u&apos;" modified="2026-09-01T08:49:00.874194Z" count="1"/>
         </bookmark:applications>
         <bookmark:private/>
       </metadata>

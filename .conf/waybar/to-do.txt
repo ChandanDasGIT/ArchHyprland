@@ -1,40 +1,27 @@
-
-1. update github and the readme page for yay -S waybar-git
-3. firefox move to ram
-
-fix vol up down - change default from easyeffects to pipewire..make tauon follow easyeffects output
-
 virtual keyboard on waybar on-click
 
-to-do
+5-6 : cc3
+7-8-9 : cc4
+10-11-12-13: cc2
 
-1. update github and the readme page for yay -S waybar-git
-3. firefox move to ram
+learn: rust + slint // c++ & qt6 qml
 
-fix vol up down - change default from easyeffects to pipewire..make tauon follow easyeffects output
+hyprmod
+reaper setup
+mango juice
 
-virtual keyboard on waybar on-click
+change shortcut update: auto system snapshot and if update makes something wrong it will auto revert to the snapshot
 
-need softwrap on pin
+#recreate the yt-downloader with c++ & qml and add two buttons:
+	1. a select download folder button
+	2. quality selector button
 
-------------
-----DONE----
-------------
+change brightness slider for diff monitor
 
-1. 1. create tarminal shortcuts  --done
-    {
-    ~/.config/hypr/hyprland.lua = hyprland-lua //
-    ~/.config/waybar/config = waybar-conf //
-    ~/.config/waybar/style.css = waybar-css //
-    ~/.config/nwg-dock-hyprland/style.css = docker-css //
-    ~/.config/nwg-drawer/drawer.css = drawer-css //
-    ~/.config/bash/bashrc = bashrc //
-    // these work with nano and kate
-
-    sudo pacman -S = install //
-    sudo pacman -Syu = update //
-    sudo pacman -Rns = uninstall //
-    find ~ -name "folder/file-name" = search "file-name" //
-    }
-
-
+apps to recreate in c++:
+		1. snake game
+		2. notepad
+		3. local music player
+		4. vid editor
+		5. daw
+		

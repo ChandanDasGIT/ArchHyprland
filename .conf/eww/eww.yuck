@@ -4,11 +4,11 @@
 (defwindow notes
   :monitor 0
   :geometry (geometry
-    :x "60px"
-    :y "60px"
-    :width "1000px"
-    :height "600px"
-    :anchor "top center")
+    :x "0px"
+    :y "0px"
+    :width "70%"
+    :height "70%"
+    :anchor "center")
   :stacking "fg"
   :focusable false
   :exclusive false
@@ -40,7 +40,7 @@
           :wrap true
           :wrap-mode "wordchar"
           :show-truncated false
-          :xalign 10
+          :xalign 0
           :valign "start")))
 
     (box

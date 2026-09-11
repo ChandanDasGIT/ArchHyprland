@@ -1,0 +1,62 @@
+* {
+all: unset;
+}
+
+
+.notes-container {
+  background: rgba(15, 15, 20, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.notes-panel {
+  background: rgba(255, 255, 255, 0.045);
+  border-radius: 12px;
+  padding: 12px 18px 18px 18px;
+
+}
+
+.notes-title {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+
+  margin-bottom: 14px;
+}
+
+.notes-text {
+  color: #d8dee9;
+  font-size: 15px;
+  font-family: monospace;
+  padding-right: 14px;
+}
+
+//* SCSS Nested GTK Scrollbar Styling */
+scrolledwindow {
+  -GtkScrolledWindow-overlay-scrolling: false;
+}
+
+scrollbar {
+  background: transparent;
+  min-width: 8px;
+  min-height: 8px;
+  padding: 2px;
+  margin-left: 4px;
+
+  trough {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    min-width: 6px;
+  }
+
+  slider {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    min-width: 6px;
+    min-height: 25px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.6);
+    }
+  }
+}

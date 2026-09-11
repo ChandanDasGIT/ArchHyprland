@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/iusearchbtw/Downloads" added="2026-09-10T15:52:53.427109Z" modified="2026-09-10T15:52:53.427111Z" visited="2026-09-10T15:52:53.427109Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;org.gnome.gThumb %u&apos;" modified="2026-09-10T15:52:53.427110Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/iusearchbtw/Pictures" added="2026-09-10T15:52:53.427112Z" modified="2026-09-10T15:52:53.427114Z" visited="2026-09-10T15:52:53.427112Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;org.gnome.gThumb %u&apos;" modified="2026-09-10T15:52:53.427112Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///run/media/iusearchbtw/Nocturnal/MaaPhotos" added="2026-09-10T15:52:53.427114Z" modified="2026-09-10T15:52:53.427115Z" visited="2026-09-10T15:52:53.427114Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;org.gnome.gThumb %u&apos;" modified="2026-09-10T15:52:53.427115Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

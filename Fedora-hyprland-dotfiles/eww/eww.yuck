@@ -1,0 +1,70 @@
+(defvar todo "")
+(defvar shortcuts "")
+
+(defwindow notes
+  :monitor 0
+  :geometry (geometry
+    :x "0px"
+    :y "0px"
+    :width "70%"
+    :height "70%"
+    :anchor "center")
+  :stacking "fg"
+  :focusable false
+  :exclusive false
+  :wm-ignore false
+
+  (box
+    :class "notes-container"
+    :orientation "h"
+    :spacing 20
+    :space-evenly true
+
+    (box
+      :class "notes-panel"
+      :orientation "v"
+      :space-evenly false
+
+
+      (label
+        :class "notes-title"
+        :text "TO-DO")
+
+      (scroll
+        :vscroll true
+        :hscroll false
+        :vexpand true
+        (label
+          :class "notes-text"
+          :text todo
+          :wrap true
+          :wrap-mode "wordchar"
+          :show-truncated false
+          :xalign 0
+          :valign "start")))
+
+    (box
+      :class "notes-panel"
+      :orientation "v"
+      :space-evenly false
+      :hexpand false
+      :vexpand false
+
+      (label
+        :class "notes-title"
+        :text "SHORTCUTS")
+
+      (scroll
+        :vscroll true
+        :hscroll false
+        :vexpand true
+        :limit-width 50
+        (label
+          :class "notes-text"
+          :text shortcuts
+          :wrap true
+          :wrap-mode "wordchar"
+          :truncate true
+          :show-truncated false
+          :xalign 0
+          :valign "start")))))

@@ -11,7 +11,7 @@ Rectangle {
 
     implicitWidth: trayRow.implicitWidth + 16
     implicitHeight: 32
-    color: "#cc000000"
+    color: "#0f000000"
     radius: 8
 
     RowLayout {

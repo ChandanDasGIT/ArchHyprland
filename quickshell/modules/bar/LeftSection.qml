@@ -108,7 +108,7 @@ RowLayout {
 
                     color: "#ffffff"
                     font.family: root.nerdFontFamily
-                    font.pixelSize: 20
+                    font.pixelSize: 15
                 }
 
                 MouseArea {
@@ -153,7 +153,7 @@ RowLayout {
                         Rectangle {
                             required property var modelData
 
-                            Layout.preferredWidth: 24
+                            Layout.preferredWidth: 20
                             Layout.preferredHeight: 24
                             Layout.alignment: Qt.AlignVCenter
                             radius: 4
@@ -183,7 +183,7 @@ RowLayout {
                                 }
 
                                 color: "#ffffff"
-                                font.pixelSize: 25
+                                font.pixelSize: 15
                             }
 
                             MouseArea {
@@ -224,7 +224,7 @@ RowLayout {
         font.pixelSize: 14
         elide: Text.ElideRight
 
-        Layout.preferredWidth: Math.min(implicitWidth, 260)
+        Layout.preferredWidth: Math.min(implicitWidth, 200)
 
         Process {
             id: playerctlProc
@@ -265,18 +265,18 @@ RowLayout {
     RowLayout {
         id: mediaSection
         spacing: 6
-        Layout.preferredHeight: 24
+        Layout.preferredHeight: 30
         Layout.alignment: Qt.AlignVCenter
 
         Text {
             id: cavaText
 
-            Layout.preferredWidth: 8 * 10
+            Layout.preferredWidth: 10 * 10
             Layout.preferredHeight: 24
             Layout.alignment: Qt.AlignVCenter
 
             color: "#ffffff"
-            font.pixelSize: 21
+            font.pixelSize: 15
 
             horizontalAlignment: Text.AlignLeft
             verticalAlignment: Text.AlignVCenter
@@ -319,7 +319,7 @@ RowLayout {
 
                         var output = ""
 
-                        for (var i = 0; i < Math.min(parts.length, 8); i++) {
+                        for (var i = 0; i < Math.min(parts.length, 10); i++) {
                             var value = parseInt(parts[i])
 
                             if (isNaN(value))

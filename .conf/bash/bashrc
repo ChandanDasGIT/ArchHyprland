@@ -1,39 +1,67 @@
-#
-# ~/.bashrc
-#
+# .bashrc
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
 
-#source ~/.config/bash/bashrc
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
+fi
+unset rc
+
+. "$HOME/.local/share/../bin/env"
+export PATH="$HOME/.local/bin:$PATH"
+
+# ─────────────────────────────────────────────
+# Search function
+# ─────────────────────────────────────────────
+alias f=fastfetch
 
 # ─────────────────────────────────────────────
 # Monitor input
 # ─────────────────────────────────────────────
 
-switch-monitor() {
+switch-hdmi() {
+    ddcutil setvcp 60 17
+}
+
+alias change-monitor='switch-hdmi'
+alias switch-display='switch-hdmi'
+alias change-display='switch-hdmi'
+alias change-monitor-15='switch-hdmi'
+alias change-display-15='switch-hdmi'
+alias change-monitor-hdmi='switch-hdmi'
+alias change-display-hdmi='switch-hdmi'
+alias hdmi='switch-hdmi'
+
+switch-dp() {
     ddcutil setvcp 60 15
 }
 
-alias change-monitor='switch-monitor'
-alias switch-display='switch-monitor'
-alias change-display='switch-monitor'
-alias change-monitor-15='switch-monitor'
-alias change-display-15='switch-monitor'
-alias change-monitor-hdmi='switch-monitor'
-alias change-display-hdmi='switch-monitor'
+alias dp='switch-dp'
 
 # ─────────────────────────────────────────────
-# Pacman
+# DNF (Fedora Package Manager)
 # ─────────────────────────────────────────────
 
-alias install='sudo pacman -S --noconfirm'
-alias update='sudo pacman -Syu --noconfirm'
-alias uninstall='sudo pacman -Rns --noconfirm'
+alias install='echo '9988' | sudo -S true && sudo dnf install -y'
+alias update='echo '9988' | sudo -S true && sudo dnf upgrade --refresh -y'
+alias uninstall='echo '9988' | sudo -S true && sudo dnf remove -y'
 
 alias cgpt='carbonyl https://chatgpt.com/'
 
